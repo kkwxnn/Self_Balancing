@@ -163,6 +163,9 @@
             <child link="link_1"/>
             <origin xyz="${LINK1['position']}" rpy="${LINK1['orientation']}"/>
             <axis xyz="0 0 1"/>
+            <limit 
+                velocity="0.5" 
+                effort="0.5"/>
         </joint>
     </xacro:macro>
 
@@ -172,6 +175,9 @@
             <child link="link_2"/>
             <origin xyz="${LINK2['position']}" rpy="${LINK2['orientation']}"/>
             <axis xyz="0 0 1"/>
+            <limit 
+                velocity="0.5" 
+                effort="0.5"/>
         </joint>
     </xacro:macro>
 
