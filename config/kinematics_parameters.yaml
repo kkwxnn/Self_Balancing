@@ -1,0 +1,25 @@
+base_link:
+  orientation: 0.0 0.0 0.0
+  position: 0.0 0.0 0.0
+link_1: 
+  orientation: 1.5708 0.0 0.0
+  position: -0.03655 -0.04386 0.2348
+
+link_2: 
+  orientation: 0.0 1.5708 0.0
+  position: 0.04386 0.03655 0.2348
+
+imusensor: 
+  orientation: 0.0 0.0 0.0 
+  position: -0.04025 0.0355 0.20855
+
+joint0:
+  lower: 0
+  upper: 0
+  velocity: 0
+  effort: 0
+joint1:
+  lower: 0
+  upper: 0
+  velocity: 0
+  effort: 0

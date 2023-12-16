@@ -1,0 +1,17 @@
+base_link:
+  orientation: 0.0 0.0 0.0
+  position: 0.0 0.0 0.0
+  color: 1 1 1 1
+link_1: 
+  orientation: 0.0 0.0 0.0
+  position: 0.0 0.0 0.0
+  color: 1 1 1 1
+link_2: 
+  orientation: 0.0 0.0 0.0
+  position: 0.0 0.0 0.0
+  color: 1 1 1 1
+imusensor:
+  orientation: 0.0 0.0 0.0
+  position: 0.0 0.0 0.0
+  color: 1 1 0 0
+

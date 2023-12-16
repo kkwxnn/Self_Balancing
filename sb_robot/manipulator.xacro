@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    
+    <xacro:macro name="base_visual" params="">
+        <visual>
+            <origin xyz="${BASE_VISUAL['position']}" rpy="${BASE_VISUAL['orientation']}"/>
+            <geometry>
+                <mesh filename="file://$(find ${description_pkg})/meshes/BaseLink.stl"/>
+            </geometry>
+            <material name="link_color">
+                <color rgba="${BASE_VISUAL['color']}"/>
+            </material>
+        </visual>
+    </xacro:macro>
+
+    <xacro:macro name="base_inertial" params="">
+        <inertial>
+            <origin xyz="${BASE_INERTIAL['com']}"/>
+            <mass value="${BASE_INERTIAL['mass']}"/>
+            <inertia 
+                ixx="${BASE_INERTIAL['inertia']['xx']}" 
+                ixy="${-BASE_INERTIAL['inertia']['xy']}" 
+                ixz="${-BASE_INERTIAL['inertia']['xz']}" 
+                iyy="${BASE_INERTIAL['inertia']['yy']}" 
+                iyz="${-BASE_INERTIAL['inertia']['yz']}" 
+                izz="${BASE_INERTIAL['inertia']['zz']}"/>
+        </inertial>
+    </xacro:macro>
+
+    <xacro:macro name="base_collision">
+        <collision>
+            <origin xyz="${BASE_COLLISION['position']}" rpy="${BASE_COLLISION['orientation']}"/>
+            <geometry>
+                <mesh filename="file://$(find ${description_pkg})/meshes/BaseLink.stl"/>
+            </geometry>
+            <surface>
+            <friction>
+            <ode>
+                <mu>100</mu>
+                <mu2>100</mu2>
+            </ode>
+            </friction>
+        </surface>
+        </collision>
+    </xacro:macro>
+
+    <xacro:macro name="link1_visual" params="">
+        <visual>
+            <origin xyz="${LINK1_VISUAL['position']}" rpy="${LINK1_VISUAL['orientation']}"/>
+            <geometry>
+                <mesh filename="file://$(find ${description_pkg})/meshes/Wheel.stl"/>
+            </geometry>
+            <material name="link_color">
+                <color rgba="${LINK1_VISUAL['color']}"/>
+            </material>
+        </visual>
+    </xacro:macro>
+
+    <xacro:macro name="link1_inertial" params="">
+        <inertial>
+            <origin xyz="${LINK1_INERTIAL['com']}"/>
+            <mass value="${LINK1_INERTIAL['mass']}"/>
+            <inertia 
+                ixx="${LINK1_INERTIAL['inertia']['xx']}" 
+                ixy="${-LINK1_INERTIAL['inertia']['xy']}" 
+                ixz="${-LINK1_INERTIAL['inertia']['xz']}" 
+                iyy="${LINK1_INERTIAL['inertia']['yy']}" 
+                iyz="${-LINK1_INERTIAL['inertia']['yz']}" 
+                izz="${LINK1_INERTIAL['inertia']['zz']}"/>
+        </inertial>
+    </xacro:macro>
+
+    <xacro:macro name="link1_collision" params="">
+        <collision>
+            <origin xyz="${LINK1_COLLISION['position']}" rpy="${LINK1_COLLISION['orientation']}"/>
+            <geometry>
+                <mesh filename="file://$(find ${description_pkg})/meshes/Wheel.stl"/>
+            </geometry>
+        </collision>
+    </xacro:macro>
+
+    <xacro:macro name="link2_visual" params="">
+        <visual>
+            <origin xyz="${LINK2_VISUAL['position']}" rpy="${LINK2_VISUAL['orientation']}"/>
+            <geometry>
+                <mesh filename="file://$(find ${description_pkg})/meshes/Wheel.stl"/>
+            </geometry>
+            <material name="link_color">
+                <color rgba="${LINK2_VISUAL['color']}"/>
+            </material>
+        </visual>
+    </xacro:macro>
+
+    <xacro:macro name="link2_inertial" params="">
+        <inertial>
+            <origin xyz="${LINK2_INERTIAL['com']}"/>
+            <mass value="${LINK2_INERTIAL['mass']}"/>
+            <inertia 
+                ixx="${LINK2_INERTIAL['inertia']['xx']}" 
+                ixy="${-LINK2_INERTIAL['inertia']['xy']}" 
+                ixz="${-LINK2_INERTIAL['inertia']['xz']}" 
+                iyy="${LINK2_INERTIAL['inertia']['yy']}" 
+                iyz="${-LINK2_INERTIAL['inertia']['yz']}" 
+                izz="${LINK2_INERTIAL['inertia']['zz']}"/>
+        </inertial>
+    </xacro:macro>
+
+    <xacro:macro name="link2_collision" params="">
+        <collision>
+            <origin xyz="${LINK2_COLLISION['position']}" rpy="${LINK2_COLLISION['orientation']}"/>
+            <geometry>
+                <mesh filename="file://$(find ${description_pkg})/meshes/Wheel.stl"/>
+            </geometry>
+        </collision>
+    </xacro:macro>
+
+    <xacro:macro name="imusensor_visual" params="">
+        <visual>
+            <origin xyz="${IMUSENSOR_VISUAL['position']}" rpy="${IMUSENSOR_VISUAL['orientation']}"/>
+            <geometry>
+                <mesh filename="file://$(find ${description_pkg})/meshes/IMU Sensor.stl"/>
+            </geometry>
+            <material name="link_color">
+                <color rgba="${IMUSENSOR_VISUAL['color']}"/>
+            </material>
+        </visual>
+    </xacro:macro>
+
+    <xacro:macro name="imusensor_inertial" params="">
+        <inertial>
+            <origin xyz="${IMUSENSOR_INERTIAL['com']}"/>
+            <mass value="${IMUSENSOR_INERTIAL['mass']}"/>
+            <inertia 
+                ixx="${IMUSENSOR_INERTIAL['inertia']['xx']}" 
+                ixy="${-IMUSENSOR_INERTIAL['inertia']['xy']}" 
+                ixz="${-IMUSENSOR_INERTIAL['inertia']['xz']}" 
+                iyy="${IMUSENSOR_INERTIAL['inertia']['yy']}" 
+                iyz="${-IMUSENSOR_INERTIAL['inertia']['yz']}" 
+                izz="${IMUSENSOR_INERTIAL['inertia']['zz']}"/>
+        </inertial>
+    </xacro:macro>
+
+    <xacro:macro name="imusensor_collision" params="">
+        <collision>
+            <origin xyz="${IMUSENSOR_COLLISION['position']}" rpy="${IMUSENSOR_COLLISION['orientation']}"/>
+            <geometry>
+                <mesh filename="file://$(find ${description_pkg})/meshes/IMU Sensor.stl"/>
+            </geometry>
+        </collision>
+    </xacro:macro>
+
+    <xacro:macro name="base" params="">
+        <joint name="base" type="fixed">
+            <parent link="base"/>
+            <child link="base_link"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/> 
+        </joint>
+    </xacro:macro>
+
+    <xacro:macro name="joint0" params="">
+        <joint name="joint0" type="continuous">
+            <parent link="base_link"/>
+            <child link="link_1"/>
+            <origin xyz="${LINK1['position']}" rpy="${LINK1['orientation']}"/>
+            <axis xyz="0 0 1"/>
+        </joint>
+    </xacro:macro>
+
+    <xacro:macro name="joint1" params="">
+        <joint name="joint1" type="continuous">
+            <parent link="base_link"/>
+            <child link="link_2"/>
+            <origin xyz="${LINK2['position']}" rpy="${LINK2['orientation']}"/>
+            <axis xyz="0 0 1"/>
+        </joint>
+    </xacro:macro>
+
+    <xacro:macro name="sensor_joint" params="">
+        <joint name="sensor_joint" type="fixed">
+            <parent link="base_link"/>
+            <child link="imusensor"/>
+            <origin xyz="${IMUSENSOR['position']}" rpy="${IMUSENSOR['orientation']}"/>
+        </joint>
+    </xacro:macro>
+
+
+
+    <xacro:macro name="self_balancing" params="">
+        <link name="base"/>
+
+        <link name="base_link">
+            <xacro:base_visual />
+            <xacro:base_inertial />
+            <xacro:base_collision />
+        </link>
+
+        <link name="link_1">
+            <xacro:link1_visual />
+            <xacro:link1_inertial />
+            <xacro:link1_collision />
+        </link>
+
+        <link name="link_2">
+            <xacro:link2_visual />
+            <xacro:link2_inertial />
+            <xacro:link2_collision />
+        </link>
+
+        <link name="imusensor">
+            <xacro:imusensor_visual/>
+            <xacro:imusensor_inertial />
+            <xacro:imusensor_collision/>
+        </link>
+
+        <xacro:base />
+        <xacro:joint0 />
+        <xacro:joint1 />
+
+        <xacro:sensor_joint />
+        
+    </xacro:macro>
+</robot>
