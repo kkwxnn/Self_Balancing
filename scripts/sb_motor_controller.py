@@ -136,7 +136,7 @@ class Motor_Velo_control(Node):
 
     def timer_callback(self):
         pass
-        # self.timestamp += 0.01
+    
         # joint 0 y
         # joint 1 x
        
