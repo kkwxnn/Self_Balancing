@@ -15,8 +15,6 @@ This project is part of the FRA501 Robotics DevOps course of third-year students
 ![Selfbalancing drawio](https://github.com/kkwxnn/self_balancing/assets/122891621/b128a024-22c6-4862-95db-3fa5b95201be)
 
 
-## **Prerequisites**
-
 
 ## **Installation**
 Step 1: Clone the repository to the src directory of your workspace. You must unzip and put each folder in the src directory. 
