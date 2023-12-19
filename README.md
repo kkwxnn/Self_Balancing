@@ -10,9 +10,9 @@ This project is part of the FRA501 Robotics DevOps course of third-year students
 1) To simulate the work system of a **Self-Balancing Robot** with 2 reaction wheels on Gazebo program with ROS2.
 2) To learn how to setup the environment for simulating robot operations.
 
-## **System Architecture**
+## **Package**
 
-![Selfbalancing drawio](https://github.com/kkwxnn/self_balancing/assets/122891621/b128a024-22c6-4862-95db-3fa5b95201be)
+![sb drawio](https://github.com/kkwxnn/self_balancing/assets/122891621/83433a7b-9782-4744-9514-3532ae13acd2)
 
 
 
