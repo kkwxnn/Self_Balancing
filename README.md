@@ -24,8 +24,13 @@ Step 1: Clone the repository to the src directory of your workspace. You must un
 git clone https://github.com/kkwxnn/self_balancing.git
 ```
 
+Step 2: Run rosdep install to install dependencies
+```
+rosdep update
+rosdep install --from-paths src -y --ignore-src
+```
 
-Step 2: Build "self_balancing" in your workspace.
+Step 3: Build "self_balancing" in your workspace.
 ```
 cd ~/[your_workspace]
 colcon build 
