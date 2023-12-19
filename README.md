@@ -1,7 +1,8 @@
 # Self-Balancing Project : FRA501 Robotics DevOps
 This project is part of the FRA501 Robotics DevOps course of third-year students at the Institute of Field Robotics (FIBO) to simulate the work system of a **Self-Balancing Robot** with 2 reaction wheels on Gazebo program with ROS2. 
 
-(https://github.com/kkwxnn/self_balancing/assets/122891621/5c837ac9-6cc1-4e91-8d1b-da7a395e55f2)
+[Screencast from 12-20-2023 05:42:58 AM.webm](https://github.com/kkwxnn/self_balancing/assets/122891621/9ce6314e-1718-485a-aff3-34d2ca084544)
+
 
 
 
