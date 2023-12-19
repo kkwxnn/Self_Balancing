@@ -12,6 +12,15 @@ def generate_launch_description():
     path = os.path.join(pkg,'sb_robot','robot.xacro')
     robot_desc = xacro.process_file(path).toxml()
 
+    world_file_name = 'sample.world'
+    world = os.path.join(get_package_share_directory(
+        'self_balancing'), 'worlds', world_file_name)
+    
+    declare_world_fname = DeclareLaunchArgument(
+        'world_fname', default_value=world, description='absolute path of gazebo world file')
+    
+    world_fname = LaunchConfiguration('world_fname')
+
     rviz_path = os.path.join(pkg,'config','_display.rviz')
 
     rviz = Node(
@@ -36,6 +45,9 @@ def generate_launch_description():
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('gazebo_ros'), 'launch'), '/gazebo.launch.py']),
+            launch_arguments={
+            'world': world_fname
+        }.items(),
         )
     
     robot_spawner = Node(
@@ -74,6 +86,7 @@ def generate_launch_description():
     
     launch_description = LaunchDescription()
     # launch_description.add_action(rviz)
+    launch_description.add_action(declare_world_fname)
     launch_description.add_action(gazebo)
     launch_description.add_action(robot_state_publisher)
     launch_description.add_action(robot_spawner)

@@ -40,8 +40,8 @@ class DummyNode(Node):
         self.Imu_angular_velocity = [msg.angular_velocity.x, msg.angular_velocity.y, msg.angular_velocity.z]
         self.Imu_linear_acceleration = [msg.linear_acceleration.x, msg.linear_acceleration.y, msg.linear_acceleration.z]
         rotation = self.quaternion_to_euler(self.Imu_orientation)
-        self.y_orientation_error = 0.0177 - rotation[1] # rad
-        self.x_orientation_error = 0.0177 - rotation[2]
+        self.y_orientation_error = 0.0144 - rotation[1] # rad
+        self.x_orientation_error = 0.0144 - rotation[2]
         # print(self.Imu_orientation)
         # print(self.Imu_angular_velocity)
         # print(self.Imu_linear_acceleration)

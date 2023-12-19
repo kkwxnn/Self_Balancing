@@ -54,6 +54,7 @@ install(DIRECTORY
   launch
   meshes
   sb_robot
+  worlds
   DESTINATION share/${PROJECT_NAME})
 
 ament_package()

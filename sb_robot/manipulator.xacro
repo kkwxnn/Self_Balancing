@@ -35,10 +35,10 @@
             </geometry>
             <surface>
             <friction>
-            <ode>
-                <mu>100</mu>
-                <mu2>100</mu2>
-            </ode>
+                <ode>
+                    <mu>1000</mu>
+                    <mu2>1000</mu2>
+                </ode>
             </friction>
         </surface>
         </collision>
@@ -163,9 +163,6 @@
             <child link="link_1"/>
             <origin xyz="${LINK1['position']}" rpy="${LINK1['orientation']}"/>
             <axis xyz="0 0 1"/>
-            <limit 
-                velocity="0.5" 
-                effort="0.5"/>
         </joint>
     </xacro:macro>
 
@@ -175,9 +172,6 @@
             <child link="link_2"/>
             <origin xyz="${LINK2['position']}" rpy="${LINK2['orientation']}"/>
             <axis xyz="0 0 1"/>
-            <limit 
-                velocity="0.5" 
-                effort="0.5"/>
         </joint>
     </xacro:macro>
 
@@ -192,7 +186,7 @@
 
 
     <xacro:macro name="self_balancing" params="">
-        <link name="base"/>
+        <!-- <link name="base"/> -->
 
         <link name="base_link">
             <xacro:base_visual />
@@ -212,17 +206,17 @@
             <xacro:link2_collision />
         </link>
 
-        <link name="imusensor">
+        <!-- <link name="imusensor">
             <xacro:imusensor_visual/>
             <xacro:imusensor_inertial />
             <xacro:imusensor_collision/>
-        </link>
+        </link> -->
 
-        <xacro:base />
+        <!-- <xacro:base /> -->
         <xacro:joint0 />
         <xacro:joint1 />
 
-        <xacro:sensor_joint />
+        <!-- <xacro:sensor_joint /> -->
         
     </xacro:macro>
 </robot>

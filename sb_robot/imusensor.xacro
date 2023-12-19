@@ -2,21 +2,21 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
     <xacro:macro name="imusensor" params="">
-        <gazebo reference="imusensor">
+        <gazebo reference="base_link">
             <gravity>true</gravity>
             <sensor name="imu_1" type="imu">
                 <always_on>true</always_on>
-                <update_rate>100</update_rate>
+                <update_rate>50</update_rate>
                 <visualize>true</visualize>
                 <topic>Imu_1</topic>
                 <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
                     <topicName>Imu_1</topicName>
-                    <bodyName>imusensor</bodyName>
-                    <updateRateHZ>10.0</updateRateHZ>
+                    <bodyName>base_link</bodyName>
+                    <updateRateHZ>50.0</updateRateHZ>
                     <gaussianNoise>0.0</gaussianNoise>
                     <xyzOffset>0 0 0</xyzOffset>
                     <rpyOffset>0 0 0</rpyOffset>
-                    <frameName>imusensor</frameName>
+                    <frameName>base_link</frameName>
                     <initialOrientationAsReference>false</initialOrientationAsReference>
                 </plugin>
                 <pose>0 0 0 0 0 0</pose>
