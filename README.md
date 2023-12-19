@@ -1,7 +1,7 @@
 # Self-Balancing Project : FRA501 Robotics DevOps
 This project is part of the FRA501 Robotics DevOps course of third-year students at the Institute of Field Robotics (FIBO) to simulate the work system of a **Self-Balancing Robot** with 2 reaction wheels on Gazebo program with ROS2. 
 
-[Screencast from 12-20-2023 05:42:58 AM.webm](https://github.com/kkwxnn/self_balancing/assets/122891621/5c837ac9-6cc1-4e91-8d1b-da7a395e55f2)
+(https://github.com/kkwxnn/self_balancing/assets/122891621/5c837ac9-6cc1-4e91-8d1b-da7a395e55f2)
 
 
 
@@ -26,8 +26,9 @@ cd ~/[your_workspace]
 colcon build 
 source install/setup.bash
 ```
-## Testing out self_balancing
-Terminal1: run launch file
+
+## Testing out "self_balancing"
+run launch file
 
 ```
 cd ~/[your_workspace]
