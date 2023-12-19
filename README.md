@@ -21,6 +21,7 @@ This project is part of the FRA501 Robotics DevOps course of third-year students
 ## **Installation**
 Step 1: Clone the repository to the src directory of your workspace. You must unzip and put each folder in the src directory. 
 ```
+cd ~/[your_workspace]/src
 git clone https://github.com/kkwxnn/self_balancing.git
 ```
 
