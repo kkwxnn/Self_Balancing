@@ -18,21 +18,19 @@ class Motor_Velo_control(Node):
         # self.create_timer(0.01,self.Controller())
         self.motor_velo_cur = [0.0,0.0]
         self.is_change_point = False
-        self.timestamp = 0
-        self.i = 0
         self.create_subscription(Imu, "/imu_plugin/out", self.Imu_sensor_callback, 10)
         self.Imu_orientation = [0.0, 0.0, 0.0, 0.0]
         self.Imu_angular_velocity = [0.0, 0.0, 0.0]
         self.Imu_linear_acceleration = [0.0, 0.0, 0.0]
         self.isEnableController = False
-        self.Kp_x = 1000.0
-        self.Kp_y = 1000.0
+        self.Kp_x = 50000.0
+        self.Kp_y = 50000.0
 
         self.Ki_x = 0.0
         self.Ki_y = 0.0
 
-        self.Kd_x = 200.0
-        self.Kd_y = 200.0
+        self.Kd_x = 10000.0
+        self.Kd_y = 10000.0
 
         self.rotation = [0.0, 0.0]
 
@@ -83,8 +81,8 @@ class Motor_Velo_control(Node):
     def Controller(self):
         if self.isEnableController == True :
             self.rotation = self.quaternion_to_euler(self.Imu_orientation)
-            self.x_orientation_error = 0.0 + self.rotation[2]  # rad
-            self.y_orientation_error = 0.0 + self.rotation[1] 
+            self.x_orientation_error = -0.0018151424 + self.rotation[2] 
+            self.y_orientation_error = self.rotation[1] + 0.0018849556 
 
             # if abs(self.y_orientation_error) < 0.0144 :
             #     self.sum_error_y = 0.0
@@ -115,10 +113,10 @@ class Motor_Velo_control(Node):
             self.prev_error_x = self.x_orientation_error
             self.prev_error_y = self.y_orientation_error
 
-            joint0_velo = P_Y + I_Y + D_Y
-            joint1_velo = P_X + I_X + D_X
+            joint1_velo = P_Y + I_Y + D_Y
+            joint0_velo = P_X + I_X + D_X
 
-            maxVel = 1500.0
+            maxVel = 10000.0
             if joint0_velo >= maxVel:
                 joint0_velo = maxVel
             elif joint0_velo <= -maxVel:
