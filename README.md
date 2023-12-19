@@ -11,7 +11,8 @@ This project is part of the FRA501 Robotics DevOps course of third-year students
 
 ## **System Architecture**
 
-(https://github.com/kkwxnn/self_balancing/assets/122891621/ae62260d-555a-4ad8-b92e-6b72e9b75808)
+![Selfbalancing drawio](https://github.com/kkwxnn/self_balancing/assets/122891621/b128a024-22c6-4862-95db-3fa5b95201be)
+
 
 
 ## **Installation**
