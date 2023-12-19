@@ -38,10 +38,9 @@ source install/setup.bash
 ```
 
 ## **Testing out "self_balancing"**
-run launch file
+run launch file in your workspace
 
 ```
-cd ~/[your_workspace]
 ros2 launch self_balancing sb_robot_spawn_launch.py
 ```
 
