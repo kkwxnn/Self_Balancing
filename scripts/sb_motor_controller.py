@@ -123,8 +123,8 @@ class Motor_Velo_control(Node):
     def timer_callback(self):
         pass
     
-        # joint 0 y
-        # joint 1 x
+        # joint 0 x
+        # joint 1 y
        
         
 
