@@ -16,11 +16,11 @@ This project is part of the FRA501 Robotics DevOps course of third-year students
 
 
 ### **Config**
+- kinematics_parameters.yaml
+- dynamics_parameters.yaml
+- visual_parameters.yaml
 - collision_parameters.yaml
 - controller_parameters.yaml
-- dynamics_parameters.yaml
-- kinematics_parameters.yaml
-- visual_parameters.yaml
 
 ### **sb_robot**
 - properties.xacro
