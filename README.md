@@ -26,8 +26,8 @@ Example:
   ![image](https://github.com/kkwxnn/self_balancing/assets/122667170/b2cdd75f-115d-46f3-871b-85cae84bd00d)
 ```yaml
 base_link:
-  orientation: 0.0 0.0 0.0    #### Unit in radian ####
-  position: 0.0 0.0 0.0      #### Unit in meter ####
+  orientation: 0.0 0.0 0.0    # Unit in radian 
+  position: 0.0 0.0 0.0      # Unit in meter 
 link_1: 
   orientation: 1.5708 0.0 0.0
   position: -0.03655 -0.04386 0.2348
@@ -44,9 +44,9 @@ Example:
   ![image](https://github.com/kkwxnn/self_balancing/assets/122667170/5fd3b383-223b-4d04-af9a-5d0e93db0a74)
 ```yaml
 base_link:
-  mass: 0.543326        #### Unit in kilograms ####
-  com: -0.012639 0.012676 0.129321      #### Unit in meter ####
-  inertia:      #### Unit in kilograms*meter^2 ####
+  mass: 0.543326        # Unit in kilograms 
+  com: -0.012639 0.012676 0.129321      # Unit in meter 
+  inertia:      # Unit in kilograms*meter^2 
     xx: 0.003732
     yy: 0.003731
     zz: 0.000287
@@ -88,11 +88,11 @@ link_2:
 
   Example:
 ```yaml
-controller_manager:         #### Package Name ####
+controller_manager:         # Package Name 
   ros__parameters:
     update_rate: 50 # Hz
 
-    velocity_controllers:        #### Type of controller ####
+    velocity_controllers:        # Type of controller 
       type: velocity_controllers/JointGroupVelocityController
 
     joint_state_broadcaster:
@@ -100,8 +100,8 @@ controller_manager:         #### Package Name ####
       
 velocity_controllers:
   ros__parameters:
-    joints:       #### Define joint that you want to control ####
-      - joint0       #### Joint's name must have defined in the robot model ####
+    joints:       # Define joint that you want to control 
+      - joint0       # Joint's name must have defined in the robot model 
       - joint1
     command_interface: 
       - velocity
@@ -131,8 +131,32 @@ velocity_controllers:
 ### **worlds**
 - sample.world
 
+  is a file that describes the gazebo’s world properties such as Sun movement and Friction. In this project we focus to the friction properties of the ground model because it highly effect to the self-balancing robot behavior. If the friction is to small, It will make the model fail down easier
+
 ### **launch**
 - sb_robot_spawn_launch.py
+
+  The launch file 'sb_robot_spawn_launch.py' initiates every node and command necessary to start the model simulation and spawn it in Gazebo. In this project, the simulation construction requires the installation and execution of dependency packages, including robot_state_publisher, gazebo_ros, and controller_manager. Additionally, another file essential for execution is our controller, defined in the script directory.
+
+```xacro
+<model name='ground_plane'>
+  <static>1</static>
+        <link name='link'>
+        ...
+        ...
+          <friction>
+              <ode>
+                <mu>1000</mu>        # set the friction coefficient here 
+                <mu2>1000</mu2>     
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+        ...
+        ...
+</model>
+```
 
 
 
