@@ -31,8 +31,9 @@ This project is part of the FRA501 Robotics DevOps course of third-year students
 
 ### **script**
 - sb_motor_controller.py
-    This file is for controlling motor velocity utilizing PID control from this equation
-https://cdn.discordapp.com/attachments/877972038680211476/1186716103955722380/image.png?ex=6594427f&is=6581cd7f&hm=ea74acf84e91d919211f830f5de244d874fcfb853df8e07e42521c0903569752&
+      - This file is for controlling motor velocity utilizing PID control from this equation
+![image](https://github.com/kkwxnn/self_balancing/assets/122891621/344370de-de5e-4966-80ab-8bdc8c1b7cca)
+
 
 ### **worlds**
 - sample.world
