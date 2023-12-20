@@ -32,8 +32,8 @@ This project is part of the FRA501 Robotics DevOps course of third-year students
 ### **script**
 - sb_motor_controller.py
   - **Imu_sensor_callback(msg)**: This function gets orientation, angular velocity, and linear acceleration from the Inertial Measurement Unit (IMU) sensor.
-  - **quaternion_to_euler(q)**: This function is for converting quaternion, which is a 4-element vector to Euler angles, which are three angles that represent the rotation about the intrinsic axes (usually roll, pitch, and yaw).
-  - **Controller()**: This function controls motor velocity to be at an orientation that makes the center of mass (CM) be above the Pivot Point utilizing PID control from this equation.
+  - **quaternion_to_euler(q)**: This function is for converting quaternion, which is a 4-element vector to Euler angles, which are three angles that represent the rotation about the intrinsic axes (roll, pitch, yaw).
+  - **Controller()**: This function controls motor velocity to be at an orientation that makes the center of mass (CM) be above the Pivot Point utilizing PID control from this equation. Joint 0 is for control X-axes and joint 1 is for control Y-axes.
     
 ![image](https://github.com/kkwxnn/self_balancing/assets/122891621/344370de-de5e-4966-80ab-8bdc8c1b7cca)
 
