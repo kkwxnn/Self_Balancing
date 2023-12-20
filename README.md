@@ -133,11 +133,6 @@ velocity_controllers:
 
   is a file that describes the gazebo’s world properties such as Sun movement and Friction. In this project we focus to the friction properties of the ground model because it highly effect to the self-balancing robot behavior. If the friction is to small, It will make the model fail down easier
 
-### **launch**
-- sb_robot_spawn_launch.py
-
-  The launch file 'sb_robot_spawn_launch.py' initiates every node and command necessary to start the model simulation and spawn it in Gazebo. In this project, the simulation construction requires the installation and execution of dependency packages, including robot_state_publisher, gazebo_ros, and controller_manager. Additionally, another file essential for execution is our controller, defined in the script directory.
-
 ```xacro
 <model name='ground_plane'>
   <static>1</static>
@@ -157,6 +152,12 @@ velocity_controllers:
         ...
 </model>
 ```
+
+### **launch**
+- sb_robot_spawn_launch.py
+
+  The launch file 'sb_robot_spawn_launch.py' initiates every node and command necessary to start the model simulation and spawn it in Gazebo. In this project, the simulation construction requires the installation and execution of dependency packages, including robot_state_publisher, gazebo_ros, and controller_manager. Additionally, another file essential for execution is our controller, defined in the script directory.
+
 
 
 
