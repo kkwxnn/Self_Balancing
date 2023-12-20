@@ -15,6 +15,15 @@ This project is part of the FRA501 Robotics DevOps course of third-year students
 ![sb drawio](https://github.com/kkwxnn/self_balancing/assets/122891621/83433a7b-9782-4744-9514-3532ae13acd2)
 
 
+### **Config**
+
+### **sb_robot**
+- properties.xacro
+- manipulator.xacro
+- robot.xacro
+- motor_controller.gazebo.xacro
+- imusensor.xacro
+
 
 ## **Installation**
 Step 1: Clone the repository to the src directory of your workspace. You must unzip and put each folder in the src directory. 
