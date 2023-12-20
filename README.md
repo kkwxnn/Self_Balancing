@@ -16,7 +16,7 @@ This project is part of the FRA501 Robotics DevOps course for third-year student
 
 
 ### **1. Config**
-The folder contains a parameter file that defines the properties of the model. You can adjust the values in the parameter file and observe how the self-balancing model behaves.
+The directory that contains a parameter file that defines the properties of the model. You can adjust the values in the parameter file and observe how the self-balancing model behaves.
 - **kinematics_parameters.yaml**
   
   The parameters file contains the position and orientation of the coordinated frame in the model, describing the pose of the links in the model. In the default of this package, I have defined the kinematic parameter values of the model, referring to the model’s frame in SOLIDWORKS.
@@ -110,6 +110,8 @@ velocity_controllers:
       - effort
 ```
 ### **2. sb_robot**
+
+  In this directory, there is a file named file.xacro used to construct the robot model. Each file in this directory undergoes a distinct process, making it easier to adjust in the future.
 - **properties.xacro**
 
   The file that will get the parameters from the config file as a variable for constructing the robot model in other files.
@@ -181,7 +183,7 @@ velocity_controllers:
     </xacro:macro>
 ```
 
-- **motor_controller.gazebo.xacro**]
+- **motor_controller.gazebo.xacro**
 
   Use the control plugin from "libgazebo_ros2_control.so" and to define the joint interface types.
 
