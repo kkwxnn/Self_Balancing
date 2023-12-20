@@ -27,7 +27,7 @@ Example:
 ```yaml
 base_link:
   orientation: 0.0 0.0 0.0    #### Unit in radian ####
-  position: 0.0 0.0 0.0      #### Unit in mater ####
+  position: 0.0 0.0 0.0      #### Unit in meter ####
 link_1: 
   orientation: 1.5708 0.0 0.0
   position: -0.03655 -0.04386 0.2348
@@ -45,7 +45,7 @@ Example:
 ```yaml
 base_link:
   mass: 0.543326        #### Unit in kilograms ####
-  com: -0.012639 0.012676 0.129321      #### Unit in mater ####
+  com: -0.012639 0.012676 0.129321      #### Unit in meter ####
   inertia:      #### Unit in kilograms*meter^2 ####
     xx: 0.003732
     yy: 0.003731
