@@ -1,5 +1,5 @@
 # Self-Balancing Project : FRA501 Robotics DevOps
-This project is part of the FRA501 Robotics DevOps course of third-year students at the Institute of Field Robotics (FIBO) to simulate the work system of a **Self-Balancing Robot** with **2 reaction wheels** on Gazebo program with ROS2. 
+This project is part of the FRA501 Robotics DevOps course of third-year students at the Institute of Field Robotics (FIBO), King Mongkut’s University of Technology Thonburi (KMUTT) to simulate the work system of a **Self-Balancing Robot** with **2 reaction wheels** on Gazebo program with ROS2. 
 
 [Screencast from 12-20-2023 05:42:58 AM.webm](https://github.com/kkwxnn/self_balancing/assets/122891621/9ce6314e-1718-485a-aff3-34d2ca084544)
 
@@ -16,6 +16,11 @@ This project is part of the FRA501 Robotics DevOps course of third-year students
 
 
 ### **Config**
+- collision_parameters.yaml
+- controller_parameters.yaml
+- dynamics_parameters.yaml
+- kinematics_parameters.yaml
+- visual_parameters.yaml
 
 ### **sb_robot**
 - properties.xacro
@@ -23,6 +28,16 @@ This project is part of the FRA501 Robotics DevOps course of third-year students
 - robot.xacro
 - motor_controller.gazebo.xacro
 - imusensor.xacro
+
+### **script**
+- sb_motor_controller.py
+
+### **worlds**
+- sample.world
+
+### **launch**
+- sb_robot_spawn_launch.py
+
 
 
 ## **Installation**
