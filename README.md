@@ -68,6 +68,6 @@ ros2 launch self_balancing sb_robot_spawn_launch.py
 ```
 
 ## **Our Team**
-1) Monsicha Sopitlaptana
-2) Peerawat Santifuengkul
+1) Monsicha Sopitlaptana 64340500071
+2) Peerawat Santifuengkul 64340500043
 
