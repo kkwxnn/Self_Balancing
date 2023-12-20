@@ -84,19 +84,6 @@ class Motor_Velo_control(Node):
             self.x_orientation_error = -0.0018151424 + self.rotation[2] 
             self.y_orientation_error = self.rotation[1] + 0.0018849556 
 
-            # if abs(self.y_orientation_error) < 0.0144 :
-            #     self.sum_error_y = 0.0
-            # if abs(self.x_orientation_error) < 0.0144 :
-            #     self.sum_error_x = 0.0
-
-            ## Goal Reach ##
-            # if self.sum_error_x == 0 and self.sum_error_y == 0:
-            #     self.motor_velo_cur = [0.0,0.0]
-                
-            #     msg_velo = Float64MultiArray()
-            #     msg_velo.data = self.motor_velo_cur
-            #     self.pub_float64.publish(msg_velo)
-
             # Kp
             P_X = self.x_orientation_error*self.Kp_x
             P_Y = self.y_orientation_error*self.Kp_y
@@ -108,8 +95,7 @@ class Motor_Velo_control(Node):
             # Kd
             D_X = (self.x_orientation_error - self.prev_error_x) * self.Kd_x
             D_Y = (self.y_orientation_error - self.prev_error_y) * self.Kd_y
-            # D_X = joint1_velo * self.Kd_x
-            # D_Y = joint0_velo * self.Kd_y
+        
             self.prev_error_x = self.x_orientation_error
             self.prev_error_y = self.y_orientation_error
 
