@@ -111,6 +111,9 @@ velocity_controllers:
 ```
 ### **sb_robot**
 - properties.xacro
+
+  Get value from config file
+  
 - manipulator.xacro
 - robot.xacro
 - motor_controller.gazebo.xacro
@@ -120,7 +123,7 @@ velocity_controllers:
 - sb_motor_controller.py
   - **Imu_sensor_callback(msg)**: This function gets orientation, angular velocity, and linear acceleration from the Inertial Measurement Unit (IMU) sensor.
   - **quaternion_to_euler(q)**: This function is for converting quaternion, which is a 4-element vector to Euler angles, which are three angles that represent the rotation about the intrinsic axes (roll, pitch, yaw).
-  - **Controller()**: This function controls motor velocity to be at an orientation that makes the center of mass (CM) be above the Pivot Point utilizing PID control from this equation, And the velocity of each joint will be published to the velocity controller . (Joint 0 is for the control orientation of X-axes and Joint 1 is for the control orientation of Y-axes)
+  - **Controller()**: This function controls motor velocity to be at an orientation that makes the center of mass (CM) be above the Pivot Point utilizing PID control from this equation, And the velocity of each joint will be published to the velocity controller. (Joint 0 is for the control orientation of X-axes and Joint 1 is for the control orientation of Y-axes)
     
 ![image](https://github.com/kkwxnn/self_balancing/assets/122891621/344370de-de5e-4966-80ab-8bdc8c1b7cca)
 
