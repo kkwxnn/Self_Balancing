@@ -15,7 +15,7 @@ This project is part of the FRA501 Robotics DevOps course for third-year student
 ![sb drawio](https://github.com/kkwxnn/self_balancing/assets/122891621/83433a7b-9782-4744-9514-3532ae13acd2)
 
 
-### **Config**
+### **1. Config**
 The folder contains a parameter file that defines the properties of the model. You can adjust the values in the parameter file and observe how the self-balancing model behaves.
 - **kinematics_parameters.yaml**
   
@@ -109,7 +109,7 @@ velocity_controllers:
       - velocity
       - effort
 ```
-### **sb_robot**
+### **2. sb_robot**
 - **properties.xacro**
 
   The file that will get the parameters from the config file as a variable for constructing the robot model in other files.
@@ -203,7 +203,7 @@ velocity_controllers:
 
   To gather all of xacro files (properties, manipulator, motor_controller.gazebo, imusensor) for use in the launch file.
 
-### **script**
+### **3. script**
 - **sb_motor_controller.py**
   - **Imu_sensor_callback(msg)**: This function gets orientation, angular velocity, and linear acceleration from the Inertial Measurement Unit (IMU) sensor.
   - **quaternion_to_euler(q)**: This function is for converting quaternion, which is a 4-element vector to Euler angles, which are three angles that represent the rotation about the intrinsic axes (roll, pitch, yaw).
@@ -237,7 +237,7 @@ class Motor_Velo_control(Node):
     ...
 ```
 
-### **worlds**
+### **4. worlds**
 - **sample.world**
 
   Is a file that describes the gazebo’s world properties such as Sun movement and Friction. In this project, we focus on the friction properties of the ground model because it highly affects the self-balancing robot behavior. If the friction is too small, It will make the model fail easily.
@@ -262,7 +262,7 @@ class Motor_Velo_control(Node):
 </model>
 ```
 
-### **launch**
+### **5. launch**
 - **sb_robot_spawn_launch.py**
 
   The launch file 'sb_robot_spawn_launch.py' initiates every node and command necessary to start the model simulation and spawn it in Gazebo. In this project, the simulation construction requires the installation and execution of dependency packages, including robot_state_publisher, gazebo_ros, and controller_manager. Additionally, another file essential for execution is our controller, defined in the script directory.
